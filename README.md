@@ -1,3 +1,19 @@
+# About MajdataView_Darwin
+
+Originated from [MajdataView](https://github.com/LingFeng-bbben/MajdataView), MajdataView_Darwin is optimized for running on macOS, including bug fixes, external file merges, and builds for both Intel and Apple Silicon architecture, etc.
+
+This version of MajdataView is called MajdataView_Darwin to make it easier to distinguish, and the version number corresponds to the original one, with "_Dawrin" attached to the end. The released .app file comprises both Intel(x86_64) and Apple Silicon(arm64) architecture, which causes almost double the file size but is still acceptable.
+
+MajdataView_Darwin has not yet implemented all the features of the original one and will only be updated when MajdataView releases an important update.
+
+TODOList:
+- [x] support for built-in skin
+- [ ] fix the recording function
+   - [ ] make ffmpeg functional
+   - [ ] connect audio stream to MajdataEdit_Darwin(still in progress)
+
+The original Readme is below:
+
 # <img src="https://user-images.githubusercontent.com/51612155/226972003-1928ce4d-56ce-497d-b958-d6aec38a602c.png" width="100px"> MajdataView&Edit
 
 
