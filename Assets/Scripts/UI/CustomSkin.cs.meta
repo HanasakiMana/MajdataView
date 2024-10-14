@@ -3,7 +3,39 @@ guid: abfe99402ae61564d9ebdee3bd92ba2a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Tap: {fileID: 21300000, guid: f188a16ef63cb4e389e51e7ff08ba1fd, type: 3}
+  - Tap_Each: {instanceID: 0}
+  - Tap_Break: {instanceID: 0}
+  - Tap_Ex: {instanceID: 0}
+  - Slide: {instanceID: 0}
+  - Slide_Each: {instanceID: 0}
+  - Slide_Break: {instanceID: 0}
+  - Star: {instanceID: 0}
+  - Star_Double: {instanceID: 0}
+  - Star_Each: {instanceID: 0}
+  - Star_Each_Double: {instanceID: 0}
+  - Star_Break: {instanceID: 0}
+  - Star_Break_Double: {instanceID: 0}
+  - Star_Ex: {instanceID: 0}
+  - Star_Ex_Double: {instanceID: 0}
+  - Hold: {instanceID: 0}
+  - Hold_On: {instanceID: 0}
+  - Hold_Off: {instanceID: 0}
+  - Hold_Each: {instanceID: 0}
+  - Hold_Each_On: {instanceID: 0}
+  - Hold_Ex: {instanceID: 0}
+  - Hold_Break: {instanceID: 0}
+  - Hold_Break_On: {instanceID: 0}
+  - JudgeText_Break: {instanceID: 0}
+  - FastText: {instanceID: 0}
+  - LateText: {instanceID: 0}
+  - Touch: {instanceID: 0}
+  - Touch_Each: {instanceID: 0}
+  - TouchPoint: {instanceID: 0}
+  - TouchPoint_Each: {instanceID: 0}
+  - TouchJust: {instanceID: 0}
+  - test: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

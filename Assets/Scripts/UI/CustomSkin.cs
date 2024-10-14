@@ -52,10 +52,115 @@ public class CustomSkin : MonoBehaviour
     public Texture2D test;
     private SpriteRenderer Outline;
 
-    // Start is called before the first frame update
-    private void Start()
+    private void loadInternal()
     {
-        var path = new DirectoryInfo(Application.dataPath).Parent.FullName + "/Skin/";
+        Outline = gameObject.GetComponent<SpriteRenderer>();
+        Outline.sprite = Resources.Load<Sprite>("Skin/outline");
+
+        Tap = Resources.Load<Sprite>("Skin/tap");
+        Tap_Each = Resources.Load<Sprite>("Skin/tap_each");
+        Tap_Break = Resources.Load<Sprite>("Skin/tap_break");
+        Tap_Ex = Resources.Load<Sprite>("Skin/tap_ex");
+
+        Slide = Resources.Load<Sprite>("Skin/slide");
+        Slide_Each = Resources.Load<Sprite>("Skin/slide_each");
+        Slide_Break = Resources.Load<Sprite>("Skin/slide_break");
+        for (var i = 0; i < 11; i++)
+        {
+            Wifi[i] = Resources.Load<Sprite>("Skin/wifi_" + i + "");
+            Wifi_Each[i] = Resources.Load<Sprite>("Skin/wifi_each_" + i + "");
+            Wifi_Break[i] = Resources.Load<Sprite>("Skin/wifi_break_" + i + "");
+        }
+
+        Star = Resources.Load<Sprite>("Skin/star");
+        Star_Double = Resources.Load<Sprite>("Skin/star_double");
+        Star_Each = Resources.Load<Sprite>("Skin/star_each");
+        Star_Each_Double = Resources.Load<Sprite>("Skin/star_each_double");
+        Star_Break = Resources.Load<Sprite>("Skin/star_break");
+        Star_Break_Double = Resources.Load<Sprite>("Skin/star_break_double");
+        Star_Ex = Resources.Load<Sprite>("Skin/star_ex");
+        Star_Ex_Double = Resources.Load<Sprite>("Skin/star_ex_double");
+
+        Hold = Resources.Load<Sprite>("Skin/hold");        
+        Hold_Each = Resources.Load<Sprite>("Skin/hold_each");
+        Hold_Each_On = Resources.Load<Sprite>("Skin/hold_each_on");
+        Hold_Ex = Resources.Load<Sprite>("Skin/hold_ex");
+        Hold_Break = Resources.Load<Sprite>("Skin/hold_break");
+        Hold_Break_On = Resources.Load<Sprite>("Skin/hold_break_on");
+        Hold_On = Resources.Load<Sprite>("Skin/hold_on");
+        Hold_Off = Resources.Load<Sprite>("Skin/hold_off");
+
+
+        Just[0] = Resources.Load<Sprite>("Skin/just_curv_r");
+        Just[1] = Resources.Load<Sprite>("Skin/just_str_r");
+        Just[2] = Resources.Load<Sprite>("Skin/just_wifi_u");
+        Just[3] = Resources.Load<Sprite>("Skin/just_curv_l");
+        Just[4] = Resources.Load<Sprite>("Skin/just_str_l");
+        Just[5] = Resources.Load<Sprite>("Skin/just_wifi_d");
+
+        Just[6] = Resources.Load<Sprite>("Skin/just_curv_r_fast_gr");
+        Just[7] = Resources.Load<Sprite>("Skin/just_str_r_fast_gr");
+        Just[8] = Resources.Load<Sprite>("Skin/just_wifi_u_fast_gr");
+        Just[9] = Resources.Load<Sprite>("Skin/just_curv_l_fast_gr");
+        Just[10] = Resources.Load<Sprite>("Skin/just_str_l_fast_gr");
+        Just[11] = Resources.Load<Sprite>("Skin/just_wifi_d_fast_gr");
+
+        Just[12] = Resources.Load<Sprite>("Skin/just_curv_r_fast_gd");
+        Just[13] = Resources.Load<Sprite>("Skin/just_str_r_fast_gd");
+        Just[14] = Resources.Load<Sprite>("Skin/just_wifi_u_fast_gd");
+        Just[15] = Resources.Load<Sprite>("Skin/just_curv_l_fast_gd");
+        Just[16] = Resources.Load<Sprite>("Skin/just_str_l_fast_gd");
+        Just[17] = Resources.Load<Sprite>("Skin/just_wifi_d_fast_gd");
+
+        Just[18] = Resources.Load<Sprite>("Skin/just_curv_r_late_gr");
+        Just[19] = Resources.Load<Sprite>("Skin/just_str_r_late_gr");
+        Just[20] = Resources.Load<Sprite>("Skin/just_wifi_u_late_gr");
+        Just[21] = Resources.Load<Sprite>("Skin/just_curv_l_late_gr");
+        Just[22] = Resources.Load<Sprite>("Skin/just_str_l_late_gr");
+        Just[23] = Resources.Load<Sprite>("Skin/just_wifi_d_late_gr");
+
+        Just[24] = Resources.Load<Sprite>("Skin/just_curv_r_late_gd");
+        Just[25] = Resources.Load<Sprite>("Skin/just_str_r_late_gd");
+        Just[26] = Resources.Load<Sprite>("Skin/just_wifi_u_late_gd");
+        Just[27] = Resources.Load<Sprite>("Skin/just_curv_l_late_gd");
+        Just[28] = Resources.Load<Sprite>("Skin/just_str_l_late_gd");
+        Just[29] = Resources.Load<Sprite>("Skin/just_wifi_d_late_gd");
+
+        Just[30] = Resources.Load<Sprite>("Skin/miss_curv_r");
+        Just[31] = Resources.Load<Sprite>("Skin/miss_str_r");
+        Just[32] = Resources.Load<Sprite>("Skin/miss_wifi_u");
+        Just[33] = Resources.Load<Sprite>("Skin/miss_curv_l");
+        Just[34] = Resources.Load<Sprite>("Skin/miss_str_l");
+        Just[35] = Resources.Load<Sprite>("Skin/miss_wifi_d");
+
+        JudgeText[0] = Resources.Load<Sprite>("Skin/judge_text_miss");
+        JudgeText[1] = Resources.Load<Sprite>("Skin/judge_text_good");
+        JudgeText[2] = Resources.Load<Sprite>("Skin/judge_text_great");
+        JudgeText[3] = Resources.Load<Sprite>("Skin/judge_text_perfect");
+        JudgeText[4] = Resources.Load<Sprite>("Skin/judge_text_cPerfect");
+        JudgeText_Break = Resources.Load<Sprite>("Skin/judge_text_break");
+
+        FastText = Resources.Load<Sprite>("Skin/fast");
+        LateText = Resources.Load<Sprite>("Skin/late");
+
+        Touch = Resources.Load<Sprite>("Skin/touch");
+        Touch_Each = Resources.Load<Sprite>("Skin/touch_each");
+        TouchPoint = Resources.Load<Sprite>("Skin/touch_point");
+        TouchPoint_Each = Resources.Load<Sprite>("Skin/touch_point_each");
+
+        TouchJust = Resources.Load<Sprite>("Skin/touch_just");
+
+        TouchBorder[0] = Resources.Load<Sprite>("Skin/touch_border_2");
+        TouchBorder[1] = Resources.Load<Sprite>("Skin/touch_border_3");
+        TouchBorder_Each[0] = Resources.Load<Sprite>("Skin/touch_border_2_each");
+        TouchBorder_Each[1] = Resources.Load<Sprite>("Skin/touch_border_3_each");
+
+        for (var i = 0; i < 4; i++) TouchHold[i] = Resources.Load<Sprite>("Skin/touchhold_" + i + "");
+        TouchHold[4] = Resources.Load<Sprite>("Skin/touchhold_border");
+    }
+    
+    private void loadExternal(string path)
+    {
         Outline = gameObject.GetComponent<SpriteRenderer>();
         print(path);
 
@@ -176,6 +281,23 @@ public class CustomSkin : MonoBehaviour
         TouchHold[4] = SpriteLoader.LoadSpriteFromFile(path + "/touchhold_border.png");
 
         Debug.Log(test);
+    }
+    
+    // Start is called before the first frame update
+    private void Start()
+    {
+        loadInternal();
+
+        // 检验是否存在外部目录
+
+        var path = new DirectoryInfo(Application.dataPath).Parent.FullName + "/Skin";
+        Debug.Log(path);
+        // 测试文件是否存在
+        Debug.Log(File.Exists(path + "/tap.png"));
+        if (File.Exists(path + "/tap.png"))
+        {
+            loadExternal(path);
+        }
     }
 
     // Update is called once per frame

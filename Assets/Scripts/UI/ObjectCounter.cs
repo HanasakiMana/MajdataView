@@ -562,13 +562,12 @@ public class ObjectCounter : MonoBehaviour
             "SLD: {2} / {7}\n" +
             "TOH: {3} / {8}\n" +
             "BRK: {4} / {9}\n" +
-            "ALL: {10} / {11}\n" +
-            "MOD: {12}",
+            "ALL: {10} / {11}\n",
             tapCount, holdCount, slideCount, touchCount, breakCount,
             tapSum, holdSum, slideSum, touchSum, breakSum,
             comboN,
-            tapSum + holdSum + slideSum + touchSum + breakSum,
-            InputManager.Mode
+            tapSum + holdSum + slideSum + touchSum + breakSum
+            // , InputManager.Mode
         );
 
         rate.text = string.Format(
